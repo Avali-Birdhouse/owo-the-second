@@ -17,6 +17,10 @@ jobs:
 
     - uses: hmarr/debug-action@v3
     
+    - name: Stop running publish with master
+      if: ${{GITHUB_REF_NAME == 'master'}}
+      run: exit 1
+    
     - name: Install dependencies
       run: sudo apt-get install -y python3-paramiko python3-lxml
 
