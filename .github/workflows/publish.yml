@@ -18,7 +18,7 @@ jobs:
     - uses: hmarr/debug-action@v3
     
     - name: Stop running publish with master
-      if: ${{GITHUB_REF_NAME == 'master'}}
+      if: GITHUB_REF_NAME == 'master'
       run: exit 1
     
     - name: Install dependencies
