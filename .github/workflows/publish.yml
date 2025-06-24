@@ -18,7 +18,7 @@ jobs:
     - uses: hmarr/debug-action@v3
     
     - name: Stop running publish with master
-      if: ${{GITHUB.REF_NAME == 'master'}} && {{github.repository == 'space-wizards/space-station-14'}}
+      if: ${{GITHUB.REF_NAME == 'master'}} && ${{github.repository == 'space-wizards/space-station-14'}}
       run: exit 1
     
     - name: Install dependencies
